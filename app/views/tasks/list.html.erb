@@ -1,0 +1,9 @@
+<h1>My tasks</h1>
+
+<ul>
+<% @tasks.each do |task| %>
+  <li class="button btn-primary">
+  <%= link_to task.title, task_path(task) %>
+  <%= link_to task.completed, task_path(task) %>
+  <% end %>
+</ul>
